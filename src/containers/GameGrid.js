@@ -5,8 +5,8 @@ class GameGrid extends React.Component {
   render() {
     return (
       <div>
-      <Grid columns={3} celled stretched>
-        <Grid.Row>
+      <Grid columns={3} celled={true} style={{height: '100vh'}}>
+        <Grid.Row style={{height: '33%'}}>
           <Grid.Column>
             <Image src='https://react.semantic-ui.com/images/wireframe/media-paragraph.png' />
           </Grid.Column>
@@ -18,7 +18,7 @@ class GameGrid extends React.Component {
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row>
+        <Grid.Row style={{height: '33%'}}>
           <Grid.Column>
             <Image src='https://react.semantic-ui.com/images/wireframe/media-paragraph.png' />
           </Grid.Column>
@@ -30,7 +30,7 @@ class GameGrid extends React.Component {
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row>
+        <Grid.Row style={{height: '33%'}}>
           <Grid.Column>
             <Image src='https://react.semantic-ui.com/images/wireframe/media-paragraph.png' />
           </Grid.Column>
