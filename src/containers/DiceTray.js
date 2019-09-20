@@ -10,6 +10,8 @@ class DiceTray extends React.Component {
           </Grid.Column>
           <Grid.Column>
           </Grid.Column>
+          <Grid.Column>
+          </Grid.Column>
         </Grid.Row>
         <Grid.Row style={{height: '33%'}}>
         </Grid.Row>
