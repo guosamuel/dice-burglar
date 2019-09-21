@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from 'semantic-ui-react'
+import Die from '../components/Die'
 
 class DiceTray extends React.Component {
   render() {
@@ -7,7 +7,7 @@ class DiceTray extends React.Component {
       <div style={{
         backgroundColor: 'red'
       }}>
-        Dice Tray if i extend this more will it reach? whoooooooooooo
+        <Die />
       </div>
     )
   }
