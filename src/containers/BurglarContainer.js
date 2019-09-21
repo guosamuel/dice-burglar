@@ -13,8 +13,10 @@ class BurglarContainer extends React.Component {
           <Grid.Row style={{height: '25%'}}>
             Score: 0/20
           </Grid.Row>
-          <Grid.Row style={{height: '65%'}}>
+          <Grid.Row style={{height: '10%'}}>
             Current Dice
+          </Grid.Row>
+          <Grid.Row style={{height: '55%'}}>
             <DiceTray />
           </Grid.Row>
         </Grid>
