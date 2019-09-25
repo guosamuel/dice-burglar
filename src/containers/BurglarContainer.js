@@ -17,7 +17,7 @@ class BurglarContainer extends React.Component {
             Current Dice
           </Grid.Row>
           <Grid.Row style={{height: '55%'}}>
-            <DiceTray diePosition={[0,0]} />
+            <DiceTray diePosition={[1, 1]} />
           </Grid.Row>
         </Grid>
       </div>

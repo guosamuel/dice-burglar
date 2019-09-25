@@ -1,28 +1,15 @@
 import React from 'react'
-import Die from '../components/Die'
-import DieSquare from '../components/DieSquare'
-
-function renderDieSquare(i, [dieX, dieY]) {
-  const x = i % 4
-  const y = Math.floor(i/4)
-  const isDieHere = x === dieX && y === dieY
-  const red = (x + y) % 2 === 1
-  const piece = isDieHere ? <Die /> : null
-
-  return (
-    <div key={i} style={{ width: '25%', height: '25%' }}>
-      <DieSquare red={red}>{piece}</DieSquare>
-    </div>
-  )
-}
+// import Die from '../components/Die'
+// import DieSquare from '../components/DieSquare'
+import RenderDieSquare from '../components/RenderDieSquare'
 
 function DiceTray({ diePosition }) {
   const squares = []
 
-  for (let i = 0; i < 16; i++) {
-    squares.push(renderDieSquare(i, diePosition))
+  for (let i = 0; i < 4; i++) {
+    squares.push(RenderDieSquare(i, diePosition))
   }
-
+  console.log(squares)
   return(
     <div
       style={{
