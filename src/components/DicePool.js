@@ -1,12 +1,19 @@
 import React from 'react'
 import DiceTray from '../containers/DiceTray'
+import { Grid } from 'semantic-ui-react'
 
 class DicePool extends React.Component {
   render() {
     return (
       <div>
-        All dice go in here
-        <DiceTray diePosition={[0,0]}/>
+      <Grid textAlign='center' columns={1} celled={true} style={{height: '25vh'}}>
+        <Grid.Row style={{height: '10%'}}>
+          All dice go in here.
+        </Grid.Row>
+        <Grid.Row style={{height: '90%'}}>
+          <DiceTray diePosition={[0,0]} />
+        </Grid.Row>
+      </Grid>
       </div>
     )
   }

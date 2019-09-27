@@ -6,10 +6,10 @@ import renderDieSquare from '../components/renderDieSquare'
 function DiceTray({ diePosition }) {
   const squares = []
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 16; i++) {
     squares.push(renderDieSquare(i, diePosition))
   }
-  
+
   return(
     <div
       style={{

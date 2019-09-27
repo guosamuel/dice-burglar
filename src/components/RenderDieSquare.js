@@ -3,8 +3,8 @@ import Die from './Die'
 import DieSquare from './DieSquare'
 
 function renderDieSquare(i, [dieX, dieY]) {
-  const x = i % 2
-  const y = Math.floor(i/2)
+  const x = i % 4
+  const y = Math.floor(i/4)
   const isDieHere = x === dieX && y === dieY
   const red = (x + y) % 2 === 1
   const piece = isDieHere ? <Die /> : null
