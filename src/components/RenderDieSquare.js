@@ -2,7 +2,7 @@ import React from 'react'
 import Die from './Die'
 import DieSquare from './DieSquare'
 
-function RenderDieSquare(i, [dieX, dieY]) {
+function renderDieSquare(i, [dieX, dieY]) {
   const x = i % 2
   const y = Math.floor(i/2)
   const isDieHere = x === dieX && y === dieY
@@ -16,4 +16,4 @@ function RenderDieSquare(i, [dieX, dieY]) {
   )
 }
 
-export default RenderDieSquare
+export default renderDieSquare

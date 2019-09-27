@@ -1,15 +1,15 @@
 import React from 'react'
 // import Die from '../components/Die'
 // import DieSquare from '../components/DieSquare'
-import RenderDieSquare from '../components/RenderDieSquare'
+import renderDieSquare from '../components/renderDieSquare'
 
 function DiceTray({ diePosition }) {
   const squares = []
 
   for (let i = 0; i < 4; i++) {
-    squares.push(RenderDieSquare(i, diePosition))
+    squares.push(renderDieSquare(i, diePosition))
   }
-  console.log(squares)
+  
   return(
     <div
       style={{

@@ -6,7 +6,7 @@ class DicePool extends React.Component {
     return (
       <div>
         All dice go in here
-        <DiceTray />
+        <DiceTray diePosition={[0,0]}/>
       </div>
     )
   }
