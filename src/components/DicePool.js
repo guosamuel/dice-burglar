@@ -11,7 +11,7 @@ class DicePool extends React.Component {
           All dice go in here.
         </Grid.Row>
         <Grid.Row style={{height: '90%'}}>
-          <DiceTray diePosition={[2,2]} />
+          <DiceTray diePosition={this.props.observingDiePosition} />
         </Grid.Row>
       </Grid>
       </div>

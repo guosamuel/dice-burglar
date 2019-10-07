@@ -25,7 +25,7 @@ class GameGrid extends React.Component {
             <BurglarContainer />
           </Grid.Column>
           <Grid.Column verticalAlign='center'>
-            <DicePool />
+            <DicePool observingDiePosition={this.props.observingDiePosition}/>
           </Grid.Column>
           <Grid.Column verticalAlign='center'>
             <BurglarContainer />
