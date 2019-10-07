@@ -14,37 +14,37 @@ class GameGrid extends React.Component {
           <Grid columns={3} celled={true} style={{height: '100vh'}}>
             <Grid.Row style={{height: '33%'}}>
               <Grid.Column verticalAlign='center'>
-                <BurglarContainer />
+                <BurglarContainer observingDiePosition={this.props.observingDiePosition}/>
               </Grid.Column>
               <Grid.Column verticalAlign='center'>
-                <BurglarContainer />
+                <BurglarContainer observingDiePosition={this.props.observingDiePosition}/>
               </Grid.Column>
               <Grid.Column verticalAlign='center'>
-                <BurglarContainer />
+                <BurglarContainer observingDiePosition={this.props.observingDiePosition}/>
               </Grid.Column>
             </Grid.Row>
 
             <Grid.Row style={{height: '33%'}}>
               <Grid.Column verticalAlign='center'>
-                <BurglarContainer />
+                <BurglarContainer observingDiePosition={this.props.observingDiePosition}/>
               </Grid.Column>
               <Grid.Column verticalAlign='center'>
                 <DicePool observingDiePosition={this.props.observingDiePosition}/>
               </Grid.Column>
               <Grid.Column verticalAlign='center'>
-                <BurglarContainer />
+                <BurglarContainer observingDiePosition={this.props.observingDiePosition}/>
               </Grid.Column>
             </Grid.Row>
 
             <Grid.Row style={{height: '33%'}}>
               <Grid.Column verticalAlign='center'>
-                <BurglarContainer />
+                <BurglarContainer observingDiePosition={this.props.observingDiePosition}/>
               </Grid.Column>
               <Grid.Column verticalAlign='center'>
-                <BurglarContainer />
+                <BurglarContainer observingDiePosition={this.props.observingDiePosition}/>
               </Grid.Column>
               <Grid.Column verticalAlign='center'>
-                <BurglarContainer />
+                <BurglarContainer observingDiePosition={this.props.observingDiePosition}/>
               </Grid.Column>
             </Grid.Row>
           </Grid>
