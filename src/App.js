@@ -1,12 +1,14 @@
 import React from 'react';
 import GameGrid from './containers/GameGrid.js'
 
-function App() {
-  return (
-    <div>
-      <GameGrid />
-    </div>
-  );
+class App extends React.Component{
+  render() {
+    return (
+      <div>
+        <GameGrid observingDiePosition={this.props.observingDiePosition}/>
+      </div>
+    );
+  }
 }
 
 export default App;

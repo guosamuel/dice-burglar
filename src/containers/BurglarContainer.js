@@ -1,7 +1,6 @@
 import React from 'react'
 import { Grid } from 'semantic-ui-react'
 import DiceTray from './DiceTray'
-import { observe } from '../observations/observe'
 
 class BurglarContainer extends React.Component {
   render() {
@@ -18,7 +17,7 @@ class BurglarContainer extends React.Component {
             Current Dice
           </Grid.Row>
           <Grid.Row style={{height: '55%'}}>
-            {observe(diePosition => (<DiceTray diePosition={diePosition} />))}
+            <DiceTray diePosition={[0,0]} />
           </Grid.Row>
         </Grid>
       </div>
