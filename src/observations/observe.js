@@ -3,7 +3,7 @@
 //   setInterval(() => receive([randPos(), randPos()]), 2000)
 // }
 
-let diePosition = [1, 1]
+let diePosition = [1, 0]
 let observer = null
 
 function emitChange() {
