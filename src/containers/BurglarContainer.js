@@ -18,7 +18,7 @@ class BurglarContainer extends React.Component {
             Current Dice
           </Grid.Row>
           <Grid.Row style={{height: '55%'}}>
-            observe(diePosition => (<DiceTray diePosition={diePosition} />)
+            {observe(diePosition => (<DiceTray diePosition={diePosition} />))}
           </Grid.Row>
         </Grid>
       </div>
