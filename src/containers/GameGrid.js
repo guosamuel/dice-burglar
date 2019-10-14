@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { Grid, Image } from 'semantic-ui-react'
 // import BurglarContainer from '../containers/BurglarContainer'
-import DicePool from '../components/DicePool.js'
+// import DicePool from '../components/DicePool.js'
 import DiceTray from './DiceTray'
 
 import { DndProvider } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
 
-const BurglarContainerIDs = React.createContext()
+const GameGridSquareIDs = React.createContext()
 
 function GameGrid(props) {
   return (
@@ -16,51 +16,53 @@ function GameGrid(props) {
         <Grid columns={3} celled={true} style={{height: '100vh'}}>
           <Grid.Row style={{height: '33%'}}>
             <Grid.Column verticalAlign='center'>
-              <BurglarContainerIDs.Provider value={1}>
+              <GameGridSquareIDs.Provider value={1}>
                 <BurglarContainer observingDiePosition={props.observingDiePosition} />
-              </BurglarContainerIDs.Provider>
+              </GameGridSquareIDs.Provider>
             </Grid.Column>
             <Grid.Column verticalAlign='center'>
-              <BurglarContainerIDs.Provider value={2}>
+              <GameGridSquareIDs.Provider value={2}>
                 <BurglarContainer observingDiePosition={props.observingDiePosition}/>
-              </BurglarContainerIDs.Provider>
+              </GameGridSquareIDs.Provider>
             </Grid.Column>
             <Grid.Column verticalAlign='center'>
-              <BurglarContainerIDs.Provider value={3}>
+              <GameGridSquareIDs.Provider value={3}>
                 <BurglarContainer observingDiePosition={props.observingDiePosition}/>
-              </BurglarContainerIDs.Provider>
+              </GameGridSquareIDs.Provider>
             </Grid.Column>
           </Grid.Row>
 
           <Grid.Row style={{height: '33%'}}>
             <Grid.Column verticalAlign='center'>
-              <BurglarContainerIDs.Provider value={4}>
+              <GameGridSquareIDs.Provider value={4}>
                 <BurglarContainer observingDiePosition={props.observingDiePosition}/>
-              </BurglarContainerIDs.Provider>
+              </GameGridSquareIDs.Provider>
             </Grid.Column>
             <Grid.Column verticalAlign='center'>
-              <DicePool observingDiePosition={props.observingDiePosition}/>
+              <GameGridSquareIDs.Provider value={5}>
+                <DicePool observingDiePosition={props.observingDiePosition}/>
+              </GameGridSquareIDs.Provider>
             </Grid.Column>
-              <BurglarContainerIDs.Provider value={6}>
+              <GameGridSquareIDs.Provider value={6}>
                 <BurglarContainer observingDiePosition={props.observingDiePosition}/>
-              </BurglarContainerIDs.Provider>
+              </GameGridSquareIDs.Provider>
           </Grid.Row>
 
           <Grid.Row style={{height: '33%'}}>
             <Grid.Column verticalAlign='center'>
-              <BurglarContainerIDs.Provider value={7}>
+              <GameGridSquareIDs.Provider value={7}>
                 <BurglarContainer observingDiePosition={props.observingDiePosition}/>
-              </BurglarContainerIDs.Provider>
+              </GameGridSquareIDs.Provider>
             </Grid.Column>
               <Grid.Column verticalAlign='center'>
-                <BurglarContainerIDs.Provider value={8}>
+                <GameGridSquareIDs.Provider value={8}>
                   <BurglarContainer observingDiePosition={props.observingDiePosition}/>
-                </BurglarContainerIDs.Provider>
+                </GameGridSquareIDs.Provider>
               </Grid.Column>
             <Grid.Column verticalAlign='center'>
-              <BurglarContainerIDs.Provider value={9}>
+              <GameGridSquareIDs.Provider value={9}>
                 <BurglarContainer observingDiePosition={props.observingDiePosition}/>
-              </BurglarContainerIDs.Provider>
+              </GameGridSquareIDs.Provider>
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -70,7 +72,7 @@ function GameGrid(props) {
 }
 
 function BurglarContainer(props) {
-  const burglarContainerID = useContext(BurglarContainerIDs)
+  const burglarContainerID = useContext(GameGridSquareIDs)
   console.log(burglarContainerID)
   return (
     <div>
@@ -88,6 +90,23 @@ function BurglarContainer(props) {
           <DiceTray diePosition={props.observingDiePosition} />
         </Grid.Row>
       </Grid>
+    </div>
+  )
+}
+
+function DicePool(props) {
+  const dicePoolID = useContext(GameGridSquareIDs)
+  console.log(dicePoolID)
+  return (
+    <div>
+    <Grid textAlign='center' columns={1} celled={true} style={{height: '25vh'}}>
+      <Grid.Row style={{height: '10%'}}>
+        All dice go in here.
+      </Grid.Row>
+      <Grid.Row style={{height: '90%'}}>
+        <DiceTray diePosition={props.observingDiePosition} />
+      </Grid.Row>
+    </Grid>
     </div>
   )
 }

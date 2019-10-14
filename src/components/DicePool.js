@@ -1,3 +1,6 @@
+//DICE POOL WAS MOVED INTO THE GAME GRID IN ORDER TO USE THE
+//USE CONTEXT HOOK
+
 import React from 'react'
 import DiceTray from '../containers/DiceTray'
 import { Grid } from 'semantic-ui-react'
