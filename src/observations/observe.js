@@ -20,10 +20,20 @@ export function observe(o) {
 }
 
 export function canMoveDie(toX, toY) {
-  console.log("TROLLOLOL")
+  //COPIED FROM THE REACT DND TO TEST IT OUT
+  const [x, y] = diePosition
+  const dx = toX - x
+  const dy = toY - y
+
+  return (
+    (Math.abs(dx) === 2 && Math.abs(dy) === 1) ||
+    (Math.abs(dx) === 1 && Math.abs(dy) === 2)
+  )
 }
 
 export function moveDie(toX, toY) {
-  diePosition = [toX, toY]
+  if (canMoveDie(toX, toY)) {
+    diePosition = [toX, toY]
+  }
   emitChange()
 }
