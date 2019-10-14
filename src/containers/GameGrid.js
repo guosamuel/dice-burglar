@@ -43,9 +43,11 @@ function GameGrid(props) {
                 <DicePool observingDiePosition={props.observingDiePosition}/>
               </GameGridSquareIDs.Provider>
             </Grid.Column>
+            <Grid.Column verticalAlign='center'>
               <GameGridSquareIDs.Provider value={6}>
                 <BurglarContainer observingDiePosition={props.observingDiePosition}/>
               </GameGridSquareIDs.Provider>
+            </Grid.Column>
           </Grid.Row>
 
           <Grid.Row style={{height: '33%'}}>
