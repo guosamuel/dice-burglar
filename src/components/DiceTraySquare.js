@@ -1,7 +1,7 @@
 import React from 'react'
 import DieSquare from './DieSquare'
 import { ItemTypes } from '../constants/constants'
-import { moveDie } from '../observations/observe'
+import { canMoveDie, moveDie } from '../observations/observe'
 import { useDrop } from 'react-dnd'
 
 export default function DiceTraySquare({x, y, children}) {
@@ -9,6 +9,7 @@ export default function DiceTraySquare({x, y, children}) {
 
   const [{ isOver, canDrop }, drop] = useDrop({
     accept: ItemTypes.DIE,
+    canDrop: () => canMoveDie(x, y),
     drop: () => moveDie(x, y),
     collect: mon => ({
       isOver: !!mon.isOver(),

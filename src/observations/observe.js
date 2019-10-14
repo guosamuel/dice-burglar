@@ -20,7 +20,7 @@ export function observe(o) {
 }
 
 export function canMoveDie(toX, toY) {
-  
+  console.log("TROLLOLOL")
 }
 
 export function moveDie(toX, toY) {
