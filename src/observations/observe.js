@@ -19,6 +19,10 @@ export function observe(o) {
   emitChange()
 }
 
+export function canMoveDie(toX, toY) {
+  
+}
+
 export function moveDie(toX, toY) {
   diePosition = [toX, toY]
   emitChange()
